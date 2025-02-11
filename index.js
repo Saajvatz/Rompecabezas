@@ -25,3 +25,11 @@ header.className = "div-header";
 
 DOM.appendChild(contenedor);
 contenedor.className = "div-contenedor";
+
+let todasLasCartasDelDOM = document.querySelectorAll('.carta');
+todasLasCartasDelDOM.forEach(cadaCarta => {
+
+    cadaCarta.addEventListener("clcik",()=>{
+        cadaCarta.classList.add("marcado");
+    })
+});
