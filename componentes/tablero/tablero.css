@@ -28,9 +28,13 @@
 }
 
 .carta:hover {
-    border: 5px solid rgb(221, 23, 23);
-    transition: 0.1s;
-    background-color: paleturquoise;
+
+    background-color: #ddd;
+    transform-style: preserve-3d;
+    transition: transform 1s, background-color 1s;
+
+    transform: rotateY(180deg);
+    background-color: #ffcc00;
 
 }
 
