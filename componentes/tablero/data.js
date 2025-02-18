@@ -1,21 +1,17 @@
-function mesclarCartas() {
+function mezclarCartas() {
     let carta_par_1 = ['💻', '🚀', '🚁', '🚂', '🚃', '🚄', '🗻'];
     let carta_par_2 = ['💻', '🚀', '🚁', '🚂', '🚃', '🚄', '🗻'];
     let todas_las_cartas = carta_par_1.concat(carta_par_2);
 
-    //Funcion con for y if
-    for (let i = 0; i < todas_las_cartas.length; i++) {
-        for (let j = i + 1; j < todas_las_cartas.length; j++) {
-            if (i % 7 === 0 && j % 2 !== 0) {
-                let temp = todas_las_cartas[i];
-                todas_las_cartas[i] = todas_las_cartas[j];
-                todas_las_cartas[j] = temp;
-            }
-        }
+    // Algoritmo de Fisher-Yates para mezclar bien las cartas
+    for (let i = todas_las_cartas.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [todas_las_cartas[i], todas_las_cartas[j]] = [todas_las_cartas[j], todas_las_cartas[i]];
     }
 
     return todas_las_cartas;
 }
 
-let todas_las_cartas = mesclarCartas();
+// Exportamos las cartas mezcladas
+let todas_las_cartas = mezclarCartas();
 export { todas_las_cartas };

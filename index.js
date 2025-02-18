@@ -1,7 +1,10 @@
 import { cargarCartas } from "./componentes/tablero/tablero.js";
 let DOM = document.querySelector("#root");
 
+import { mezclarCartas } from "./componentes/tablero/tablero.js";
+
 import { img } from "./componentes/header/header.js";
+
 
 let contenedor = document.createElement('div');
 

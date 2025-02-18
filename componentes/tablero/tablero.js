@@ -34,4 +34,12 @@ function cargarCartas() {
     return div;
 }
 
+function mezclarCartas(mazo) {
+    for (let i = mazo.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [mazo[i], mazo[j]] = [mazo[j], mazo[i]]; // Intercambia los valores
+    }
+    return mazo;
+}
 export { cargarCartas };
+export {mezclarCartas}
